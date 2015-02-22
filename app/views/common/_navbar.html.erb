@@ -1,7 +1,15 @@
 <nav class="navbar navbar-default" role="navigation">
+
+
+
   <div class="container-fluid">
+   
+
+
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">亂開討論版</a>
+
+      <a class="navbar-brand" href="/">臺北大學生聯誼</a>
+
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -10,10 +18,11 @@
           <li> <%= link_to("註冊", new_user_registration_path) %> </li>
           <li> <%= link_to("登入", new_user_session_path) %> </li>
         <% else %>
-          <li>
-          <li> <%= link_to("My Groups", account_groups_path) %></li> 
-            <li> <%= link_to("My Posts", account_posts_path) %></li> 
-              Hi!, <%= current_user.name %> </li>
+          
+           <li> Hi!, <%= current_user.name %> </li>
+          <li> <%= link_to("我已加入的聯誼", account_groups_path) %></li> 
+            <li> <%= link_to("我所回文的的聯誼", account_posts_path) %></li> 
+          
               <li> <%= link_to("帳號設定", edit_user_registration_path )%></li>
               <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
 
